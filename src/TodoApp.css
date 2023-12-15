@@ -1,0 +1,179 @@
+/* CSS styles for the TodoApp components */
+.todo-app {
+  margin: auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.add-todo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type='text'] {
+  width: 80%;
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Icon styles */
+button svg {
+  margin-right: 5px;
+}
+button img {
+  width: 16px;
+  height: 16px;
+}
+
+.delete-todo-btn {
+  background-color: #db9292;
+}
+.delete-todo-btn:hover {
+  background-color: #8d1717;
+}
+
+/* Media queries */
+@media screen and (max-width: 375px) {
+  .todo-app {
+    width: 200px;
+  }
+  .filter-radio-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-input {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 425px) and (min-width: 376px) {
+  .todo-app {
+    width: 300px;
+  }
+  .filter-radio-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-input {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .todo-app {
+    width: 400px;
+  }
+  .filter-radio-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-input {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .todo-app {
+    width: 600px;
+  }
+  .filter-radio-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-input {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  .todo-app {
+    width: 800px;
+  }
+  .filter-radio-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-input {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 2560px) and (min-width: 1441px) {
+  .todo-app {
+    width: 1000px;
+  }
+  .filter-radio-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-input {
+    width: 1000px;
+  }
+}
